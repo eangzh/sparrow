@@ -1,0 +1,16 @@
+server:
+  port: 1865
+
+# MySQL 数据库配置
+spring:
+  datasource:
+    url: ENC(JPbjZhYjE9DJ9zSe5XQNOb9Jd3LY0p66weO5iAdq/j8Ovt8L/TjEZxtKldE71RtedMsUwLPVYZWC+SKndafPUvXvF5owQa8k0GlTiUVZtoBG5ercFrqFInwS8LiBwmWEfPipJgmWzlXVxHwYaQO4cZuSUV+esJg07vJYNHX4ZXaVRlStACIYUSFez/fLb6L/VF+rMyUe6KnnerNiuFcCif15KlubVb655TdrveLiZD8bXDkJGcZGMw4vWRHG/3lBI6DdqB7EIFHAamAC8K3y69N3icV2to1mrSqjvuA/FlZaZGnC5LJ8JHQrimQjYaag3lafIzbA0Fy5wtKVs4mOhcVvGmsMWtvHGoO0uT0qcCw=)
+    username: ENC(WZh1D06gzJ6F2k6xFaQPDtMqoMIgZOGi)
+    password: ENC(23B//z/SX+A5xNEYEtR1zGl3FJUx18mM2hitQ5lYwnE=)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# jasypt 密码加密配置
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
