@@ -35,4 +35,4 @@ build/
 .DS_Store
 
 date/
-/date/
+**/CodeGenerateOutput
