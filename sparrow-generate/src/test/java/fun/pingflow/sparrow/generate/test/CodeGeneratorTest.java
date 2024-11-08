@@ -59,6 +59,8 @@ public class CodeGeneratorTest {
                 .strategyConfig(builder -> builder
                         // 设置需要生成的表名
                         .addInclude("sparrow_user")
+                        // 类名移除表前缀
+                        .addTablePrefix("sparrow")
 
                         // Entity 配置
                         .entityBuilder()
