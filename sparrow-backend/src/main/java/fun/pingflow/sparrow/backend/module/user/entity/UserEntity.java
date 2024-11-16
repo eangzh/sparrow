@@ -57,9 +57,6 @@ public class UserEntity implements Serializable {
     @TableLogic
     private String deletedFlag;
 
-    /** 乐观锁版本号，默认0 */
-    private Byte version;
-
     /** 扩展字段 */
     private String extend1;
 
