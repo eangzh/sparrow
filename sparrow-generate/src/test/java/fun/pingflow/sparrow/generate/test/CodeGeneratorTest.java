@@ -3,13 +3,10 @@ package fun.pingflow.sparrow.generate.test;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-import fun.pingflow.sparrow.generate.base.BaseEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.Arrays;
 
 /**
  * 代码生成器
@@ -46,13 +43,15 @@ public class CodeGeneratorTest {
                 })
                 // 包配置
                 .packageConfig(builder -> builder
-                        .parent("fun.pingflow.sparrow.backend.module") // 父包名
-                        .moduleName("login") // 父包模块名
+                        // TODO
+                        .parent("fun.pingflow.sparrow") // 父包名
+                        // TODO
+                        .moduleName("module") // 父包模块名
                         .controller("controller") // Controller 包名
                         .service("service") // Service 包名
                         .serviceImpl("service.impl") // Service Impl 包名
                         .mapper("mapper") // Mapper 包名
-                        .xml("mapper.xml") // Mapper XML 包名
+                        .xml("mapper") // Mapper XML 包名
                         .entity("entity") // Entity 包名
                 )
                 // 策略配置(包括模板配置)
@@ -64,12 +63,12 @@ public class CodeGeneratorTest {
 
                         // Entity 配置
                         .entityBuilder()
-                        .superClass(BaseEntity.class)
+                        // .superClass(BaseEntity.class)
                         .enableLombok()
                         .enableChainModel()
                         .versionColumnName("version") // 乐观锁字段名(数据库字段)
                         .logicDeleteColumnName("deleted_flag")
-                        .addSuperEntityColumns(Arrays.asList("id", "created_at", "create_by", "updated_at", "update_by", "deleted_flag", "version", "extend1", "extend2", "extend3"))
+                        // .addSuperEntityColumns(Arrays.asList("id", "created_at", "create_by", "updated_at", "update_by", "deleted_flag", "version", "extend1", "extend2", "extend3"))
                         .formatFileName("%sEntity")
                         .enableFileOverride()
 
@@ -89,7 +88,7 @@ public class CodeGeneratorTest {
                         .mapperBuilder()
                         .mapperAnnotation(Mapper.class)
                         .formatMapperFileName("%sMapper")
-                        .formatXmlFileName("%sXml")
+                        .formatXmlFileName("%sMapper")
                         .enableFileOverride()
                 )
 
