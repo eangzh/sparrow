@@ -16,9 +16,12 @@ public class SparrowConstant {
     @AllArgsConstructor
     public enum Response {
         SUCCESS("0000", "操作成功"),
+
         PARAM_ERROR("1000", "参数有误"),
         SERVICE_ERROR("9090", "服务异常，请联系管理员"),
 
+        AUTH_ERROR("1400", "账号或密码错误"),
+        AUTH_FREEZE("1401", "账号冻结"),
 
         ;
 

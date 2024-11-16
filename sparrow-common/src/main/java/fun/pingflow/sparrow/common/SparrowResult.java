@@ -48,4 +48,11 @@ public class SparrowResult<T> {
                 .build();
     }
 
+    public SparrowResult<T> buildByResponse(SparrowConstant.Response response) {
+        return SparrowResult.<T>builder()
+                .code(response.getCode())
+                .desc(response.getDesc())
+                .build();
+    }
+
 }
